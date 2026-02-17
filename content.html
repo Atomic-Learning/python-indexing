@@ -1,0 +1,47 @@
+
+<p>Since strings are sequences, you can access individual characters by their position. This is called <strong>indexing</strong>.</p>
+
+<h2>Zero-Based Indexing</h2>
+
+<p>In Python, the first character is at index <strong>0</strong>, not 1. This is called <strong>zero-based indexing</strong>:</p>
+
+<py-cell>word = "hello"
+#        01234  (indices)
+
+print(word[0])
+print(word[1])
+print(word[2])
+print(word[3])
+print(word[4])</py-cell>
+
+<p>So to get the first character, you use index 0. To get the second character, you use index 1, and so on.</p>
+
+<h2>Negative Indexing</h2>
+
+<p>Python also lets you use <strong>negative indices</strong> to count backward from the end of the string. Index <code>-1</code> refers to the last character, <code>-2</code> to the second-to-last, and so on:</p>
+
+<py-cell>word = "hello"
+#       -5-4-3-2-1  (negative indices)
+#        01234      (positive indices)
+
+print(word[-1])
+print(word[-2])
+print(word[-5])</py-cell>
+
+<p>This is useful when you want to get characters near the end without knowing the string's length:</p>
+
+<py-cell>phrase = "Hello back!"
+
+print(phrase[-1])
+print(phrase[-2])
+print(phrase[-11])</py-cell>
+
+<h2>A Character Is Still a String</h2>
+
+<p>When you use indexing to get a single character, you get back a string that is exactly one character long (not a special "character" type):</p>
+
+<py-cell>word = "hello"
+first_char = word[0]
+
+print(first_char)
+print(type(first_char))</py-cell>

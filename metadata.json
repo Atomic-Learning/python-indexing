@@ -1,0 +1,20 @@
+{
+    "title": "Python: Strings - Indexing Characters",
+    "slug": "python-strings-indexing",
+    "description": "Accessing individual characters in a string using 0-based indexing and negative indices (counting backward from the end).",
+    "authors": [
+        "chris-cooling"
+    ],
+    "tags": [
+        "python"
+    ],
+    "duration": 5,
+    "prerequisites": [
+        "python-strings-introduction",
+        "python-type-function"
+    ],
+    "related": [
+        "python-strings-slicing",
+        "python-indexerror"
+    ]
+}
