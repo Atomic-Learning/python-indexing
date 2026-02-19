@@ -1,47 +1,36 @@
 
-<p>Since strings are sequences, you can access individual characters by their position. This is called <strong>indexing</strong>.</p>
+<p>Many Python collections have items that are ordered and accessible by position, expressed as an integer index. This is called <strong>indexing</strong>. Common indexable types include strings, lists, tuples, and Numpy arrays.</p>
 
 <h2>Zero-Based Indexing</h2>
 
-<p>In Python, the first character is at index <strong>0</strong>, not 1. This is called <strong>zero-based indexing</strong>:</p>
+<p>To retrieve an item from a sequence in Python, you use an integer index in square brackets following the variable what references the collection. In Python, the index of the first item is <strong>0</strong>, not 1. This is called <strong>zero-based indexing</strong>. The following example demonstrates this with a string:</p>
 
 <py-cell>word = "hello"
 #        01234  (indices)
 
 print(word[0])
 print(word[1])
-print(word[2])
-print(word[3])
 print(word[4])</py-cell>
-
-<p>So to get the first character, you use index 0. To get the second character, you use index 1, and so on.</p>
 
 <h2>Negative Indexing</h2>
 
-<p>Python also lets you use <strong>negative indices</strong> to count backward from the end of the string. Index <code>-1</code> refers to the last character, <code>-2</code> to the second-to-last, and so on:</p>
+<p>You can also use <strong>negative indices</strong> to count from the end. Index <code>-1</code> is the last item, <code>-2</code> is the second-to-last, and so on.</p>
 
-<py-cell>word = "hello"
-#       -5-4-3-2-1  (negative indices)
-#        01234      (positive indices)
+<py-cell>numbers = [10, 20, 30, 40, 50]
 
-print(word[-1])
-print(word[-2])
-print(word[-5])</py-cell>
+print(numbers[-1])
+print(numbers[-2])
+print(numbers[-5])</py-cell>
 
-<p>This is useful when you want to get characters near the end without knowing the string's length:</p>
+<p>Negative indexing is useful when you want items near the end without calculating the length first.</p>
 
-<py-cell>phrase = "Hello back!"
+<h2>Returned Type</h2>
 
-print(phrase[-1])
-print(phrase[-2])
-print(phrase[-11])</py-cell>
+<p>The exact type of the item returned varies a little by the type of collection being indexed. Many collections, such as lists, store arbitrary Python objects, so indexing returns an object of whatever type was stored in that position. For strings, indexing always returns a string of length 1:</p>
 
-<h2>A Character Is Still a String</h2>
+<py-cell>text = "Python"
+print(type(text[0]))
 
-<p>When you use indexing to get a single character, you get back a string that is exactly one character long (not a special "character" type):</p>
-
-<py-cell>word = "hello"
-first_char = word[0]
-
-print(first_char)
-print(type(first_char))</py-cell>
+my_list = [1, 2, 3.5] # A list of integers and floats
+print(type(my_list[0]))
+print(type(my_list[2]))</py-cell>
