@@ -15,7 +15,7 @@
         "python-type-function"
     ],
     "related": [
-        "python-strings-slicing",
+        "python-slicing",
         "python-indexerror"
     ]
 }
